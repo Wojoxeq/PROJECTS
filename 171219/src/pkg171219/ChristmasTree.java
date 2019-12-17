@@ -31,5 +31,13 @@ public class ChristmasTree {
 	    }
 	    System.out.println();
 	}
+	for(int z=0;z<=levels-1;z++){
+	    System.out.print(" ");
+	}
+	System.out.print("H");
+	System.out.println("");
+	for(int z =0;z<= levels-1;z++){
+	    System.out.println("");
+	}
     }
 }
