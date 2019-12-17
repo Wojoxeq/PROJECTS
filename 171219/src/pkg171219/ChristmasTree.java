@@ -14,30 +14,34 @@ import java.util.Random;
 public class ChristmasTree {
 
     public void setChristmasTree(int levels) {
-	String[] bubles = {"@", "O", "o", "*", "*", "*"};
-	int f, a;
+        String[] bubles = {"@", "O", "o", "*", "*", "*"};
+        int f, a;
+        for (int i = 0; i < levels; i++) {
 
-	for (int i = 0; i < levels; i++) {
-	    for (a = 0; a < levels * 2; a++) {
-		if (a < (levels - i) || a > (levels + i)) {
-		    System.out.print(" ");
-		} else {
+            for (a = 0; a < levels * 2; a++) {
 
-		    Random rnd = new Random();
-		    f = rnd.nextInt(5);
+                if (a < (levels - i) || a > (levels + i)) {
+                    System.out.print(" ");
+                } else {
+                    if (i == 0) {
+                        System.out.print("^");
+                        continue;
+                    }
+                    Random rnd = new Random();
+                    f = rnd.nextInt(5);
 
-		    System.out.print(bubles[f]);
-		}
-	    }
-	    System.out.println();
-	}
-	for(int z=0;z<=levels-1;z++){
-	    System.out.print(" ");
-	}
-	System.out.print("H");
-	System.out.println("");
-	for(int z =0;z<= levels-1;z++){
-	    System.out.println("");
-	}
+                    System.out.print(bubles[f]);
+                }
+            }
+            System.out.println();
+        }
+        for (int z = 0; z <= levels - 1; z++) {
+            System.out.print(" ");
+        }
+        System.out.print("H");
+        System.out.println("");
+        for (int z = 0; z <= levels - 1; z++) {
+            System.out.println("");
+        }
     }
 }
